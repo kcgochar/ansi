@@ -1,0 +1,47 @@
+---
+- hosts: webservers
+  tasks: 
+  - name: install latest apache
+    yum: 
+       name: "{{ item }}"
+       state: latest
+    loop: 
+      - httpd
+      - mariadb-server
+  - name: copy configuraiton
+    copy:
+      src: /home/ec2-user/environment/ansi/httpd.conf
+      dest: /etc/httpd/conf/httpd.conf
+    notify: "apache restart"
+  - name: cop html file
+    copy: 
+      src: /home/ec2-user/environment/ansi/index.html
+      dest: /var/www/html
+  - name: start apache server if not
+    service:
+      name: "{{ item }}"
+      state: started
+      enabled: yes
+    loop: 
+      - httpd
+      - mariadb
+  handlers:
+  - name: apache restart
+    service:
+      name: "{{ item }}"
+      state: restarted
+    loop:
+      - httpd
+      - mariadb
+    listen: "myrestart services"
+
+    
+      
+      
+      
+      
+  
+      
+       
+    
+   

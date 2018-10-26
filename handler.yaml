@@ -1,0 +1,22 @@
+---
+- hosts: webservers
+  tasks:
+  - name: install latest apache server
+    yum: 
+      name: httpd
+      state: latest
+  - name: copy html file
+    copy: 
+      src: /home/ec2-user/environment/ansi/httpd.conf
+      dest: /etc/httpd/conf/httpd.conf
+    notify: "myrestart apache"
+  - name: Start service httpd, if not started
+    service:
+      name: httpd
+      state: started
+      enabled: yes
+  handlers: 
+  - name: myrestart apache
+    service:
+      name: httpd
+      state: restarted

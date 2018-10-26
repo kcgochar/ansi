@@ -1,0 +1,735 @@
+ansible-playbook 2.6.4
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/ec2-user/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.6/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.6.9 (unknown, Nov  2 2017, 19:21:21) [GCC 4.8.5 20150623 (Red Hat 4.8.5-11)]
+Using /etc/ansible/ansible.cfg as config file
+Parsed /home/ec2-user/environment/webserverinvent inventory source with ini plugin
+
+PLAYBOOK: webdeploy.yaml ***************************************************************************************************************************
+1 plays in webdeploy.yaml
+
+PLAY [webservers] **********************************************************************************************************************************
+
+TASK [Gathering Facts] *****************************************************************************************************************************
+task path: /home/ec2-user/environment/ansi/webdeploy.yaml:2
+<ec2-35-175-234-151.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 ec2-35-175-234-151.compute-1.amazonaws.com '/bin/sh -c '"'"'echo ~ec2-user && sleep 0'"'"''
+<ec2-54-175-195-234.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 ec2-54-175-195-234.compute-1.amazonaws.com '/bin/sh -c '"'"'echo ~ec2-user && sleep 0'"'"''
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, '/home/ec2-user\n', '')
+<ec2-35-175-234-151.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 ec2-35-175-234-151.compute-1.amazonaws.com '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1540548229.91-97607466662312 `" && echo ansible-tmp-1540548229.91-97607466662312="` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1540548229.91-97607466662312 `" ) && sleep 0'"'"''
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, '/home/ec2-user\n', '')
+<ec2-54-175-195-234.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 ec2-54-175-195-234.compute-1.amazonaws.com '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1540548229.92-277675848948532 `" && echo ansible-tmp-1540548229.92-277675848948532="` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1540548229.92-277675848948532 `" ) && sleep 0'"'"''
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, 'ansible-tmp-1540548229.91-97607466662312=/home/ec2-user/.ansible/tmp/ansible-tmp-1540548229.91-97607466662312\n', '')
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, 'ansible-tmp-1540548229.92-277675848948532=/home/ec2-user/.ansible/tmp/ansible-tmp-1540548229.92-277675848948532\n', '')
+Using module file /usr/lib/python2.6/site-packages/ansible/modules/system/setup.py
+<ec2-54-175-195-234.compute-1.amazonaws.com> PUT /home/ec2-user/.ansible/tmp/ansible-local-7181nYbNAl/tmpl1rn8p TO /home/ec2-user/.ansible/tmp/ansible-tmp-1540548229.92-277675848948532/setup.py
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 '[ec2-54-175-195-234.compute-1.amazonaws.com]'
+Using module file /usr/lib/python2.6/site-packages/ansible/modules/system/setup.py
+<ec2-35-175-234-151.compute-1.amazonaws.com> PUT /home/ec2-user/.ansible/tmp/ansible-local-7181nYbNAl/tmpQR43OF TO /home/ec2-user/.ansible/tmp/ansible-tmp-1540548229.91-97607466662312/setup.py
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 '[ec2-35-175-234-151.compute-1.amazonaws.com]'
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, 'sftp> put /home/ec2-user/.ansible/tmp/ansible-local-7181nYbNAl/tmpQR43OF /home/ec2-user/.ansible/tmp/ansible-tmp-1540548229.91-97607466662312/setup.py\n', '')
+<ec2-35-175-234-151.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 ec2-35-175-234-151.compute-1.amazonaws.com '/bin/sh -c '"'"'chmod u+x /home/ec2-user/.ansible/tmp/ansible-tmp-1540548229.91-97607466662312/ /home/ec2-user/.ansible/tmp/ansible-tmp-1540548229.91-97607466662312/setup.py && sleep 0'"'"''
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, 'sftp> put /home/ec2-user/.ansible/tmp/ansible-local-7181nYbNAl/tmpl1rn8p /home/ec2-user/.ansible/tmp/ansible-tmp-1540548229.92-277675848948532/setup.py\n', '')
+<ec2-54-175-195-234.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 ec2-54-175-195-234.compute-1.amazonaws.com '/bin/sh -c '"'"'chmod u+x /home/ec2-user/.ansible/tmp/ansible-tmp-1540548229.92-277675848948532/ /home/ec2-user/.ansible/tmp/ansible-tmp-1540548229.92-277675848948532/setup.py && sleep 0'"'"''
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, '', '')
+<ec2-54-175-195-234.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 -tt ec2-54-175-195-234.compute-1.amazonaws.com '/bin/sh -c '"'"'sudo -H -S -n -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-ttfuolkoovrvuumaugtyhtmazwuueccx; /usr/bin/python /home/ec2-user/.ansible/tmp/ansible-tmp-1540548229.92-277675848948532/setup.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, '', '')
+<ec2-35-175-234-151.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 -tt ec2-35-175-234-151.compute-1.amazonaws.com '/bin/sh -c '"'"'sudo -H -S -n -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-meyuaxvtmrcdanhcehfdrpfjxdrebjga; /usr/bin/python /home/ec2-user/.ansible/tmp/ansible-tmp-1540548229.91-97607466662312/setup.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+Escalation succeeded
+Escalation succeeded
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, '\r\n{"invocation": {"module_args": {"filter": "*", "gather_subset": ["all"], "fact_path": "/etc/ansible/facts.d", "gather_timeout": 10}}, "ansible_facts": {"ansible_product_serial": "ec208def-3588-42de-d8d4-86783f83e197", "ansible_form_factor": "Other", "ansible_user_gecos": "root", "ansible_distribution_file_parsed": true, "ansible_fips": false, "ansible_service_mgr": "systemd", "ansible_user_id": "root", "ansible_selinux_python_present": false, "ansible_userspace_bits": "64", "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDWVjybt9xytZok4P/mll0AyPuxTnHwlXfUtHs/mUWUeMHjeHRHaiakdNp1BeNPKoSN6kb9BWgSOkLwcg+2+eTbUZxXVU/n7grUOrk5vHoBv4jI730/8peQMAyY8vuJIJqETxckpEglkVXN+Oq3+v6hPBsJCZeFkax689R5yoXDey7zajfQWKWNqQjYtjsQLC8KD973pdixubxY6fsf/ywGgrakkC+mXVWf3cxkKeRfj/LRbT81eof7QNR2awVWFcJ3vryrREaASQoW5ke5tlw/r3Iw7cM+3mYonpXM623+i8Da2RMNTnFIM375MwgjcU3zJT8CBVK367MCDvN0mb67", "gather_subset": ["all"], "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBF+eTftX1YYjJr4+rINa4uZIfQHX0r/FbIAHRe65hD9lDsS4ZxdbCAXbXlf7CWhrssaXwGzX5DXZmZxUKwoEhRQ=", "ansible_local": {}, "ansible_distribution_version": "2", "ansible_domain": "ec2.internal", "ansible_distribution_file_path": "/etc/system-release", "ansible_user_shell": "/bin/bash", "ansible_virtualization_type": "xen", "ansible_real_user_id": 0, "ansible_processor_cores": 1, "ansible_virtualization_role": "guest", "ansible_distribution_file_variety": "Amazon", "ansible_dns": {"nameservers": ["172.31.0.2"], "search": ["ec2.internal"], "options": {"attempts": "5", "timeout": "2"}}, "ansible_effective_group_id": 0, "ansible_is_chroot": false, "ansible_bios_version": "4.2.amazon", "ansible_processor": ["0", "GenuineIntel", "Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz"], "ansible_date_time": {"weekday_number": "5", "iso8601_basic_short": "20181026T100350", "tz": "UTC", "weeknumber": "43", "hour": "10", "year": "2018", "minute": "03", "tz_offset": "+0000", "month": "10", "epoch": "1540548230", "iso8601_micro": "2018-10-26T10:03:50.706974Z", "weekday": "Friday", "time": "10:03:50", "date": "2018-10-26", "iso8601": "2018-10-26T10:03:50Z", "day": "26", "iso8601_basic": "20181026T100350706910", "second": "50"}, "ansible_lo": {"features": {"tx_checksum_ipv4": "off [fixed]", "generic_receive_offload": "on", "tx_checksum_ipv6": "off [fixed]", "tx_scatter_gather_fraglist": "on [fixed]", "rx_all": "off [fixed]", "highdma": "on [fixed]", "rx_fcs": "off [fixed]", "tx_lockless": "on [fixed]", "tx_tcp_ecn_segmentation": "on", "rx_udp_tunnel_port_offload": "off [fixed]", "esp_hw_offload": "off [fixed]", "tx_gso_robust": "off [fixed]", "tx_tcp_mangleid_segmentation": "on", "tx_ipxip4_segmentation": "off [fixed]", "tx_checksumming": "on", "vlan_challenged": "on [fixed]", "loopback": "on [fixed]", "tx_ipxip6_segmentation": "off [fixed]", "fcoe_mtu": "off [fixed]", "scatter_gather": "on", "tx_checksum_sctp": "on [fixed]", "tx_vlan_stag_hw_insert": "off [fixed]", "rx_vlan_stag_hw_parse": "off [fixed]", "tx_gso_partial": "off [fixed]", "rx_vlan_stag_filter": "off [fixed]", "large_receive_offload": "off [fixed]", "tx_scatter_gather": "on [fixed]", "rx_checksumming": "on [fixed]", "tx_tcp_segmentation": "on", "netns_local": "on [fixed]", "tx_esp_segmentation": "off [fixed]", "generic_segmentation_offload": "on", "tx_udp_tnl_segmentation": "off [fixed]", "tcp_segmentation_offload": "on", "l2_fwd_offload": "off [fixed]", "rx_vlan_offload": "off [fixed]", "ntuple_filters": "off [fixed]", "tx_gre_csum_segmentation": "off [fixed]", "esp_tx_csum_hw_offload": "off [fixed]", "tx_tcp6_segmentation": "on", "tx_udp_tnl_csum_segmentation": "off [fixed]", "udp_fragmentation_offload": "off", "tx_sctp_segmentation": "on", "tx_checksum_fcoe_crc": "off [fixed]", "hw_tc_offload": "off [fixed]", "tx_checksum_ip_generic": "on [fixed]", "tx_fcoe_segmentation": "off [fixed]", "tx_nocache_copy": "off [fixed]", "rx_vlan_filter": "off [fixed]", "tx_vlan_offload": "off [fixed]", "receive_hashing": "off [fixed]", "tx_gre_segmentation": "off [fixed]"}, "hw_timestamp_filters": [], "mtu": 65536, "device": "lo", "promisc": false, "timestamping": ["tx_software", "rx_software", "software"], "ipv4": {"broadcast": "host", "netmask": "255.0.0.0", "network": "127.0.0.0", "address": "127.0.0.1"}, "ipv6": [{"scope": "host", "prefix": "128", "address": "::1"}], "active": true, "type": "loopback"}, "ansible_memtotal_mb": 985, "ansible_architecture": "x86_64", "ansible_device_links": {"masters": {}, "labels": {"xvda1": ["\\\\x2f"]}, "ids": {}, "uuids": {"xvda1": ["933deb5a-af4b-437b-82e6-2b449da297c5"]}}, "ansible_default_ipv4": {"macaddress": "12:40:e3:26:90:d2", "network": "172.31.80.0", "mtu": 9001, "broadcast": "172.31.95.255", "alias": "eth0", "netmask": "255.255.240.0", "address": "172.31.95.61", "interface": "eth0", "type": "ether", "gateway": "172.31.80.1"}, "ansible_swapfree_mb": 0, "ansible_default_ipv6": {}, "ansible_distribution_release": "NA", "ansible_system_vendor": "Xen", "ansible_os_family": "RedHat", "ansible_cmdline": {"console": "ttyS0,115200n8", "net.ifnames": "0", "biosdevname": "0", "BOOT_IMAGE": "/boot/vmlinuz-4.14.70-72.55.amzn2.x86_64", "ro": true, "root": "UUID=933deb5a-af4b-437b-82e6-2b449da297c5", "nvme_core.io_timeout": "4294967295"}, "ansible_effective_user_id": 0, "ansible_user_gid": 0, "ansible_selinux": {"status": "Missing selinux Python library"}, "ansible_product_version": "4.2.amazon", "ansible_apparmor": {"status": "disabled"}, "ansible_userspace_architecture": "x86_64", "ansible_product_uuid": "EC208DEF-3588-42DE-D8D4-86783F83E197", "ansible_fqdn": "ip-172-31-95-61.ec2.internal", "ansible_system": "Linux", "ansible_pkg_mgr": "yum", "ansible_memfree_mb": 555, "ansible_devices": {"xvda": {"scheduler_mode": "noop", "rotational": "0", "vendor": null, "sectors": "16777216", "links": {"masters": [], "labels": [], "ids": [], "uuids": []}, "sas_device_handle": null, "sas_address": null, "virtual": 1, "host": "", "sectorsize": "512", "removable": "0", "support_discard": "0", "model": null, "partitions": {"xvda1": {"sectorsize": 512, "uuid": "933deb5a-af4b-437b-82e6-2b449da297c5", "links": {"masters": [], "labels": ["\\\\x2f"], "ids": [], "uuids": ["933deb5a-af4b-437b-82e6-2b449da297c5"]}, "sectors": "16773087", "start": "4096", "holders": [], "size": "8.00 GB"}}, "holders": [], "size": "8.00 GB"}}, "ansible_user_uid": 0, "ansible_lvm": {"pvs": {}, "lvs": {}, "vgs": {}}, "ansible_distribution": "Amazon", "ansible_user_dir": "/root", "ansible_env": {"USERNAME": "root", "LANG": "en_US.UTF-8", "TERM": "screen", "SHELL": "/bin/bash", "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-meyuaxvtmrcdanhcehfdrpfjxdrebjga; /usr/bin/python /home/ec2-user/.ansible/tmp/ansible-tmp-1540548229.91-97607466662312/setup.py", "SHLVL": "1", "SUDO_UID": "1000", "SUDO_GID": "1000", "PWD": "/home/ec2-user", "LOGNAME": "root", "USER": "root", "PATH": "/sbin:/bin:/usr/sbin:/usr/bin", "MAIL": "/var/mail/ec2-user", "SUDO_USER": "ec2-user", "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:", "HOME": "/root", "_": "/usr/bin/python"}, "ansible_distribution_major_version": "NA", "module_setup": true, "ansible_processor_count": 1, "ansible_hostname": "ip-172-31-95-61", "ansible_processor_vcpus": 1, "ansible_swaptotal_mb": 0, "ansible_lsb": {}, "ansible_real_group_id": 0, "ansible_bios_date": "08/24/2006", "ansible_all_ipv6_addresses": ["fe80::1040:e3ff:fe26:90d2"], "ansible_interfaces": ["lo", "eth0"], "ansible_uptime_seconds": 9204, "ansible_machine_id": "d9a604f7210d497d8bba85ebc56f57eb", "ansible_kernel": "4.14.70-72.55.amzn2.x86_64", "ansible_memory_mb": {"real": {"total": 985, "used": 430, "free": 555}, "swap": {"cached": 0, "total": 0, "free": 0, "used": 0}, "nocache": {"used": 132, "free": 853}}, "ansible_iscsi_iqn": "", "ansible_system_capabilities_enforced": "True", "ansible_python": {"executable": "/usr/bin/python", "version": {"micro": 14, "major": 2, "releaselevel": "final", "serial": 0, "minor": 7}, "type": "CPython", "has_sslcontext": true, "version_info": [2, 7, 14, "final", 0]}, "ansible_processor_threads_per_core": 1, "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIN1Nuv1VFh65cncUZ59Q/+X2mxCr8OZu6IRZ/Qf8Ittf", "ansible_mounts": [{"block_used": 299590, "uuid": "933deb5a-af4b-437b-82e6-2b449da297c5", "size_total": 8577331200, "block_total": 2094075, "mount": "/", "block_available": 1794485, "size_available": 7350210560, "fstype": "xfs", "inode_total": 4193216, "options": "rw,noatime,attr2,inode64,noquota", "device": "/dev/xvda1", "inode_used": 39117, "block_size": 4096, "inode_available": 4154099}], "ansible_eth0": {"macaddress": "12:40:e3:26:90:d2", "features": {"tx_checksum_ipv4": "on [fixed]", "generic_receive_offload": "on", "tx_checksum_ipv6": "off [requested on]", "tx_scatter_gather_fraglist": "off [fixed]", "rx_all": "off [fixed]", "highdma": "off [fixed]", "rx_fcs": "off [fixed]", "tx_lockless": "off [fixed]", "tx_tcp_ecn_segmentation": "off [fixed]", "rx_udp_tunnel_port_offload": "off [fixed]", "esp_hw_offload": "off [fixed]", "tx_gso_robust": "on [fixed]", "tx_tcp_mangleid_segmentation": "off", "tx_ipxip4_segmentation": "off [fixed]", "tx_checksumming": "on", "vlan_challenged": "off [fixed]", "loopback": "off [fixed]", "tx_ipxip6_segmentation": "off [fixed]", "fcoe_mtu": "off [fixed]", "scatter_gather": "on", "tx_checksum_sctp": "off [fixed]", "tx_vlan_stag_hw_insert": "off [fixed]", "rx_vlan_stag_hw_parse": "off [fixed]", "tx_gso_partial": "off [fixed]", "rx_vlan_stag_filter": "off [fixed]", "large_receive_offload": "off [fixed]", "tx_scatter_gather": "on", "rx_checksumming": "on [fixed]", "tx_tcp_segmentation": "on", "netns_local": "off [fixed]", "tx_esp_segmentation": "off [fixed]", "generic_segmentation_offload": "on", "tx_udp_tnl_segmentation": "off [fixed]", "tcp_segmentation_offload": "on", "l2_fwd_offload": "off [fixed]", "rx_vlan_offload": "off [fixed]", "ntuple_filters": "off [fixed]", "tx_gre_csum_segmentation": "off [fixed]", "esp_tx_csum_hw_offload": "off [fixed]", "tx_tcp6_segmentation": "off [requested on]", "tx_udp_tnl_csum_segmentation": "off [fixed]", "udp_fragmentation_offload": "off", "tx_sctp_segmentation": "off [fixed]", "tx_checksum_fcoe_crc": "off [fixed]", "hw_tc_offload": "off [fixed]", "tx_checksum_ip_generic": "off [fixed]", "tx_fcoe_segmentation": "off [fixed]", "tx_nocache_copy": "off", "rx_vlan_filter": "off [fixed]", "tx_vlan_offload": "off [fixed]", "receive_hashing": "off [fixed]", "tx_gre_segmentation": "off [fixed]"}, "pciid": "vif-0", "module": "xen_netfront", "mtu": 9001, "device": "eth0", "promisc": false, "timestamping": ["rx_software", "software"], "ipv4": {"broadcast": "172.31.95.255", "netmask": "255.255.240.0", "network": "172.31.80.0", "address": "172.31.95.61"}, "ipv6": [{"scope": "link", "prefix": "64", "address": "fe80::1040:e3ff:fe26:90d2"}], "active": true, "type": "ether", "hw_timestamp_filters": []}, "ansible_nodename": "ip-172-31-95-61.ec2.internal", "ansible_product_name": "HVM domU", "ansible_machine": "x86_64", "ansible_system_capabilities": ["cap_chown", "cap_dac_override", "cap_dac_read_search", "cap_fowner", "cap_fsetid", "cap_kill", "cap_setgid", "cap_setuid", "cap_setpcap", "cap_linux_immutable", "cap_net_bind_service", "cap_net_broadcast", "cap_net_admin", "cap_net_raw", "cap_ipc_lock", "cap_ipc_owner", "cap_sys_module", "cap_sys_rawio", "cap_sys_chroot", "cap_sys_ptrace", "cap_sys_pacct", "cap_sys_admin", "cap_sys_boot", "cap_sys_nice", "cap_sys_resource", "cap_sys_time", "cap_sys_tty_config", "cap_mknod", "cap_lease", "cap_audit_write", "cap_audit_control", "cap_setfcap", "cap_mac_override", "cap_mac_admin", "cap_syslog", "35", "36", "37+ep"], "ansible_all_ipv4_addresses": ["172.31.95.61"], "ansible_python_version": "2.7.14"}}\r\n', 'Shared connection to ec2-35-175-234-151.compute-1.amazonaws.com closed.\r\n')
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, '\r\n{"invocation": {"module_args": {"filter": "*", "gather_subset": ["all"], "fact_path": "/etc/ansible/facts.d", "gather_timeout": 10}}, "ansible_facts": {"ansible_product_serial": "ec2ae0ba-dcd9-d737-939f-21d5414f4111", "ansible_form_factor": "Other", "ansible_user_gecos": "root", "ansible_distribution_file_parsed": true, "ansible_fips": false, "ansible_service_mgr": "systemd", "ansible_user_id": "root", "ansible_selinux_python_present": false, "ansible_userspace_bits": "64", "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCw7hrFPLvKnLVQrt9xf0EcR12kv3ghAh+KpjlOCEzMMShWFh/kCpqG8A2E6ZBbQR54LGaAyJWP5L3oT+SrnHnhEJpgXms5LI6SnZYiv/vqpuzWwan9fArcnTAbRxDLDoybemtwLaYa78cMewIeDNcKFBT5ewNyZHeTXT5Pw6CyNfo6QuZvPpDqdbKwmW8gz2la6uZnOwenxxonnTTm78jFzKI1s4Pan+vfnOJC1oBSRJ1cV1HXouugT6Vumda6J4ZKjcPT1n3jxpDJyvWysjDcOIDaXv1KCEh7BriUUI4sGvrUOC6NpRtpPm/oRs5N5+ZNr+a0/+ObBMK/HcEa7j7T", "gather_subset": ["all"], "ansible_architecture": "x86_64", "ansible_local": {}, "ansible_distribution_version": "2", "ansible_domain": "ec2.internal", "ansible_distribution_file_path": "/etc/system-release", "ansible_user_shell": "/bin/bash", "ansible_virtualization_type": "xen", "ansible_real_user_id": 0, "ansible_processor_cores": 1, "ansible_virtualization_role": "guest", "ansible_distribution_file_variety": "Amazon", "ansible_dns": {"nameservers": ["172.31.0.2"], "search": ["ec2.internal"], "options": {"attempts": "5", "timeout": "2"}}, "ansible_effective_group_id": 0, "ansible_is_chroot": false, "ansible_bios_version": "4.2.amazon", "ansible_processor": ["0", "GenuineIntel", "Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz"], "ansible_date_time": {"weekday_number": "5", "iso8601_basic_short": "20181026T100350", "tz": "UTC", "weeknumber": "43", "hour": "10", "year": "2018", "minute": "03", "tz_offset": "+0000", "month": "10", "epoch": "1540548230", "iso8601_micro": "2018-10-26T10:03:50.714003Z", "weekday": "Friday", "time": "10:03:50", "date": "2018-10-26", "iso8601": "2018-10-26T10:03:50Z", "day": "26", "iso8601_basic": "20181026T100350713943", "second": "50"}, "ansible_lo": {"features": {"tx_checksum_ipv4": "off [fixed]", "generic_receive_offload": "on", "tx_checksum_ipv6": "off [fixed]", "tx_scatter_gather_fraglist": "on [fixed]", "rx_all": "off [fixed]", "highdma": "on [fixed]", "rx_fcs": "off [fixed]", "tx_lockless": "on [fixed]", "tx_tcp_ecn_segmentation": "on", "rx_udp_tunnel_port_offload": "off [fixed]", "esp_hw_offload": "off [fixed]", "tx_gso_robust": "off [fixed]", "tx_tcp_mangleid_segmentation": "on", "tx_ipxip4_segmentation": "off [fixed]", "tx_checksumming": "on", "vlan_challenged": "on [fixed]", "loopback": "on [fixed]", "tx_ipxip6_segmentation": "off [fixed]", "fcoe_mtu": "off [fixed]", "scatter_gather": "on", "tx_checksum_sctp": "on [fixed]", "tx_vlan_stag_hw_insert": "off [fixed]", "rx_vlan_stag_hw_parse": "off [fixed]", "tx_gso_partial": "off [fixed]", "rx_vlan_stag_filter": "off [fixed]", "large_receive_offload": "off [fixed]", "tx_scatter_gather": "on [fixed]", "rx_checksumming": "on [fixed]", "tx_tcp_segmentation": "on", "netns_local": "on [fixed]", "tx_esp_segmentation": "off [fixed]", "generic_segmentation_offload": "on", "tx_udp_tnl_segmentation": "off [fixed]", "tcp_segmentation_offload": "on", "l2_fwd_offload": "off [fixed]", "rx_vlan_offload": "off [fixed]", "ntuple_filters": "off [fixed]", "tx_gre_csum_segmentation": "off [fixed]", "esp_tx_csum_hw_offload": "off [fixed]", "tx_tcp6_segmentation": "on", "tx_udp_tnl_csum_segmentation": "off [fixed]", "udp_fragmentation_offload": "off", "tx_sctp_segmentation": "on", "tx_checksum_fcoe_crc": "off [fixed]", "hw_tc_offload": "off [fixed]", "tx_checksum_ip_generic": "on [fixed]", "tx_fcoe_segmentation": "off [fixed]", "tx_nocache_copy": "off [fixed]", "rx_vlan_filter": "off [fixed]", "tx_vlan_offload": "off [fixed]", "receive_hashing": "off [fixed]", "tx_gre_segmentation": "off [fixed]"}, "hw_timestamp_filters": [], "mtu": 65536, "device": "lo", "promisc": false, "timestamping": ["tx_software", "rx_software", "software"], "ipv4": {"broadcast": "host", "netmask": "255.0.0.0", "network": "127.0.0.0", "address": "127.0.0.1"}, "ipv6": [{"scope": "host", "prefix": "128", "address": "::1"}], "active": true, "type": "loopback"}, "ansible_memtotal_mb": 985, "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAOms6vy3vpGFWQ9PJdEivc/hFSrjyvdWyDiaX685TMHvwYCYp7GIDmx1Ecl4CFzXw0p9OoDORSRXoxwzvMahGU=", "ansible_device_links": {"masters": {}, "labels": {"xvda1": ["\\\\x2f"]}, "ids": {}, "uuids": {"xvda1": ["933deb5a-af4b-437b-82e6-2b449da297c5"]}}, "ansible_default_ipv4": {"macaddress": "12:4e:47:24:db:b4", "network": "172.31.80.0", "mtu": 9001, "broadcast": "172.31.95.255", "alias": "eth0", "netmask": "255.255.240.0", "address": "172.31.92.77", "interface": "eth0", "type": "ether", "gateway": "172.31.80.1"}, "ansible_swapfree_mb": 0, "ansible_default_ipv6": {}, "ansible_distribution_release": "NA", "ansible_system_vendor": "Xen", "ansible_os_family": "RedHat", "ansible_cmdline": {"console": "ttyS0,115200n8", "net.ifnames": "0", "biosdevname": "0", "BOOT_IMAGE": "/boot/vmlinuz-4.14.70-72.55.amzn2.x86_64", "ro": true, "root": "UUID=933deb5a-af4b-437b-82e6-2b449da297c5", "nvme_core.io_timeout": "4294967295"}, "ansible_effective_user_id": 0, "ansible_user_gid": 0, "ansible_selinux": {"status": "Missing selinux Python library"}, "ansible_product_version": "4.2.amazon", "ansible_apparmor": {"status": "disabled"}, "ansible_userspace_architecture": "x86_64", "ansible_product_uuid": "EC2AE0BA-DCD9-D737-939F-21D5414F4111", "ansible_fqdn": "ip-172-31-92-77.ec2.internal", "ansible_system": "Linux", "ansible_pkg_mgr": "yum", "ansible_memfree_mb": 556, "ansible_devices": {"xvda": {"scheduler_mode": "noop", "rotational": "0", "vendor": null, "sectors": "16777216", "links": {"masters": [], "labels": [], "ids": [], "uuids": []}, "sas_device_handle": null, "sas_address": null, "virtual": 1, "host": "", "sectorsize": "512", "removable": "0", "support_discard": "0", "model": null, "partitions": {"xvda1": {"sectorsize": 512, "uuid": "933deb5a-af4b-437b-82e6-2b449da297c5", "links": {"masters": [], "labels": ["\\\\x2f"], "ids": [], "uuids": ["933deb5a-af4b-437b-82e6-2b449da297c5"]}, "sectors": "16773087", "start": "4096", "holders": [], "size": "8.00 GB"}}, "holders": [], "size": "8.00 GB"}}, "ansible_user_uid": 0, "ansible_lvm": {"pvs": {}, "lvs": {}, "vgs": {}}, "ansible_distribution": "Amazon", "ansible_user_dir": "/root", "ansible_env": {"USERNAME": "root", "LANG": "en_US.UTF-8", "TERM": "screen", "SHELL": "/bin/bash", "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-ttfuolkoovrvuumaugtyhtmazwuueccx; /usr/bin/python /home/ec2-user/.ansible/tmp/ansible-tmp-1540548229.92-277675848948532/setup.py", "SHLVL": "1", "SUDO_UID": "1000", "SUDO_GID": "1000", "PWD": "/home/ec2-user", "LOGNAME": "root", "USER": "root", "PATH": "/sbin:/bin:/usr/sbin:/usr/bin", "MAIL": "/var/mail/ec2-user", "SUDO_USER": "ec2-user", "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:", "HOME": "/root", "_": "/usr/bin/python"}, "ansible_distribution_major_version": "NA", "module_setup": true, "ansible_processor_count": 1, "ansible_hostname": "ip-172-31-92-77", "ansible_processor_vcpus": 1, "ansible_swaptotal_mb": 0, "ansible_lsb": {}, "ansible_real_group_id": 0, "ansible_bios_date": "08/24/2006", "ansible_all_ipv6_addresses": ["fe80::104e:47ff:fe24:dbb4"], "ansible_interfaces": ["lo", "eth0"], "ansible_uptime_seconds": 9207, "ansible_machine_id": "d9a604f7210d497d8bba85ebc56f57eb", "ansible_kernel": "4.14.70-72.55.amzn2.x86_64", "ansible_memory_mb": {"real": {"total": 985, "used": 429, "free": 556}, "swap": {"cached": 0, "total": 0, "free": 0, "used": 0}, "nocache": {"used": 132, "free": 853}}, "ansible_iscsi_iqn": "", "ansible_system_capabilities_enforced": "True", "ansible_python": {"executable": "/usr/bin/python", "version": {"micro": 14, "major": 2, "releaselevel": "final", "serial": 0, "minor": 7}, "type": "CPython", "has_sslcontext": true, "version_info": [2, 7, 14, "final", 0]}, "ansible_processor_threads_per_core": 1, "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIOAnXGpJFAG5k4luGWb6nyGXoofReRBjI9tpWvwjlv9v", "ansible_mounts": [{"block_used": 299681, "uuid": "933deb5a-af4b-437b-82e6-2b449da297c5", "size_total": 8577331200, "block_total": 2094075, "mount": "/", "block_available": 1794394, "size_available": 7349837824, "fstype": "xfs", "inode_total": 4193216, "options": "rw,noatime,attr2,inode64,noquota", "device": "/dev/xvda1", "inode_used": 39117, "block_size": 4096, "inode_available": 4154099}], "ansible_eth0": {"macaddress": "12:4e:47:24:db:b4", "features": {"tx_checksum_ipv4": "on [fixed]", "generic_receive_offload": "on", "tx_checksum_ipv6": "off [requested on]", "tx_scatter_gather_fraglist": "off [fixed]", "rx_all": "off [fixed]", "highdma": "off [fixed]", "rx_fcs": "off [fixed]", "tx_lockless": "off [fixed]", "tx_tcp_ecn_segmentation": "off [fixed]", "rx_udp_tunnel_port_offload": "off [fixed]", "esp_hw_offload": "off [fixed]", "tx_gso_robust": "on [fixed]", "tx_tcp_mangleid_segmentation": "off", "tx_ipxip4_segmentation": "off [fixed]", "tx_checksumming": "on", "vlan_challenged": "off [fixed]", "loopback": "off [fixed]", "tx_ipxip6_segmentation": "off [fixed]", "fcoe_mtu": "off [fixed]", "scatter_gather": "on", "tx_checksum_sctp": "off [fixed]", "tx_vlan_stag_hw_insert": "off [fixed]", "rx_vlan_stag_hw_parse": "off [fixed]", "tx_gso_partial": "off [fixed]", "rx_vlan_stag_filter": "off [fixed]", "large_receive_offload": "off [fixed]", "tx_scatter_gather": "on", "rx_checksumming": "on [fixed]", "tx_tcp_segmentation": "on", "netns_local": "off [fixed]", "tx_esp_segmentation": "off [fixed]", "generic_segmentation_offload": "on", "tx_udp_tnl_segmentation": "off [fixed]", "tcp_segmentation_offload": "on", "l2_fwd_offload": "off [fixed]", "rx_vlan_offload": "off [fixed]", "ntuple_filters": "off [fixed]", "tx_gre_csum_segmentation": "off [fixed]", "esp_tx_csum_hw_offload": "off [fixed]", "tx_tcp6_segmentation": "off [requested on]", "tx_udp_tnl_csum_segmentation": "off [fixed]", "udp_fragmentation_offload": "off", "tx_sctp_segmentation": "off [fixed]", "tx_checksum_fcoe_crc": "off [fixed]", "hw_tc_offload": "off [fixed]", "tx_checksum_ip_generic": "off [fixed]", "tx_fcoe_segmentation": "off [fixed]", "tx_nocache_copy": "off", "rx_vlan_filter": "off [fixed]", "tx_vlan_offload": "off [fixed]", "receive_hashing": "off [fixed]", "tx_gre_segmentation": "off [fixed]"}, "pciid": "vif-0", "module": "xen_netfront", "mtu": 9001, "device": "eth0", "promisc": false, "timestamping": ["rx_software", "software"], "ipv4": {"broadcast": "172.31.95.255", "netmask": "255.255.240.0", "network": "172.31.80.0", "address": "172.31.92.77"}, "ipv6": [{"scope": "link", "prefix": "64", "address": "fe80::104e:47ff:fe24:dbb4"}], "active": true, "type": "ether", "hw_timestamp_filters": []}, "ansible_nodename": "ip-172-31-92-77.ec2.internal", "ansible_product_name": "HVM domU", "ansible_machine": "x86_64", "ansible_system_capabilities": ["cap_chown", "cap_dac_override", "cap_dac_read_search", "cap_fowner", "cap_fsetid", "cap_kill", "cap_setgid", "cap_setuid", "cap_setpcap", "cap_linux_immutable", "cap_net_bind_service", "cap_net_broadcast", "cap_net_admin", "cap_net_raw", "cap_ipc_lock", "cap_ipc_owner", "cap_sys_module", "cap_sys_rawio", "cap_sys_chroot", "cap_sys_ptrace", "cap_sys_pacct", "cap_sys_admin", "cap_sys_boot", "cap_sys_nice", "cap_sys_resource", "cap_sys_time", "cap_sys_tty_config", "cap_mknod", "cap_lease", "cap_audit_write", "cap_audit_control", "cap_setfcap", "cap_mac_override", "cap_mac_admin", "cap_syslog", "35", "36", "37+ep"], "ansible_all_ipv4_addresses": ["172.31.92.77"], "ansible_python_version": "2.7.14"}}\r\n', 'Shared connection to ec2-54-175-195-234.compute-1.amazonaws.com closed.\r\n')
+<ec2-35-175-234-151.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 ec2-35-175-234-151.compute-1.amazonaws.com '/bin/sh -c '"'"'rm -f -r /home/ec2-user/.ansible/tmp/ansible-tmp-1540548229.91-97607466662312/ > /dev/null 2>&1 && sleep 0'"'"''
+<ec2-54-175-195-234.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 ec2-54-175-195-234.compute-1.amazonaws.com '/bin/sh -c '"'"'rm -f -r /home/ec2-user/.ansible/tmp/ansible-tmp-1540548229.92-277675848948532/ > /dev/null 2>&1 && sleep 0'"'"''
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, '', '')
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, '', '')
+ok: [ec2-54-175-195-234.compute-1.amazonaws.com]
+ok: [ec2-35-175-234-151.compute-1.amazonaws.com]
+META: ran handlers
+
+TASK [install latest apache server] ****************************************************************************************************************
+task path: /home/ec2-user/environment/ansi/webdeploy.yaml:4
+<ec2-35-175-234-151.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 ec2-35-175-234-151.compute-1.amazonaws.com '/bin/sh -c '"'"'echo ~ec2-user && sleep 0'"'"''
+<ec2-54-175-195-234.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 ec2-54-175-195-234.compute-1.amazonaws.com '/bin/sh -c '"'"'echo ~ec2-user && sleep 0'"'"''
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, '/home/ec2-user\n', '')
+<ec2-35-175-234-151.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 ec2-35-175-234-151.compute-1.amazonaws.com '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1540548230.98-180080720207544 `" && echo ansible-tmp-1540548230.98-180080720207544="` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1540548230.98-180080720207544 `" ) && sleep 0'"'"''
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, 'ansible-tmp-1540548230.98-180080720207544=/home/ec2-user/.ansible/tmp/ansible-tmp-1540548230.98-180080720207544\n', '')
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, '/home/ec2-user\n', '')
+<ec2-54-175-195-234.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 ec2-54-175-195-234.compute-1.amazonaws.com '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1540548231.0-167765800213755 `" && echo ansible-tmp-1540548231.0-167765800213755="` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1540548231.0-167765800213755 `" ) && sleep 0'"'"''
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, 'ansible-tmp-1540548231.0-167765800213755=/home/ec2-user/.ansible/tmp/ansible-tmp-1540548231.0-167765800213755\n', '')
+Using module file /usr/lib/python2.6/site-packages/ansible/modules/packaging/os/yum.py
+<ec2-54-175-195-234.compute-1.amazonaws.com> PUT /home/ec2-user/.ansible/tmp/ansible-local-7181nYbNAl/tmpl1rn8p TO /home/ec2-user/.ansible/tmp/ansible-tmp-1540548231.0-167765800213755/yum.py
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 '[ec2-54-175-195-234.compute-1.amazonaws.com]'
+Using module file /usr/lib/python2.6/site-packages/ansible/modules/packaging/os/yum.py
+<ec2-35-175-234-151.compute-1.amazonaws.com> PUT /home/ec2-user/.ansible/tmp/ansible-local-7181nYbNAl/tmpQR43OF TO /home/ec2-user/.ansible/tmp/ansible-tmp-1540548230.98-180080720207544/yum.py
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 '[ec2-35-175-234-151.compute-1.amazonaws.com]'
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, 'sftp> put /home/ec2-user/.ansible/tmp/ansible-local-7181nYbNAl/tmpl1rn8p /home/ec2-user/.ansible/tmp/ansible-tmp-1540548231.0-167765800213755/yum.py\n', '')
+<ec2-54-175-195-234.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 ec2-54-175-195-234.compute-1.amazonaws.com '/bin/sh -c '"'"'chmod u+x /home/ec2-user/.ansible/tmp/ansible-tmp-1540548231.0-167765800213755/ /home/ec2-user/.ansible/tmp/ansible-tmp-1540548231.0-167765800213755/yum.py && sleep 0'"'"''
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, 'sftp> put /home/ec2-user/.ansible/tmp/ansible-local-7181nYbNAl/tmpQR43OF /home/ec2-user/.ansible/tmp/ansible-tmp-1540548230.98-180080720207544/yum.py\n', '')
+<ec2-35-175-234-151.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 ec2-35-175-234-151.compute-1.amazonaws.com '/bin/sh -c '"'"'chmod u+x /home/ec2-user/.ansible/tmp/ansible-tmp-1540548230.98-180080720207544/ /home/ec2-user/.ansible/tmp/ansible-tmp-1540548230.98-180080720207544/yum.py && sleep 0'"'"''
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, '', '')
+<ec2-35-175-234-151.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 -tt ec2-35-175-234-151.compute-1.amazonaws.com '/bin/sh -c '"'"'sudo -H -S -n -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-bwdiggitzzidubuqwvwvzhdnspwzwqxd; /usr/bin/python /home/ec2-user/.ansible/tmp/ansible-tmp-1540548230.98-180080720207544/yum.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, '', '')
+<ec2-54-175-195-234.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 -tt ec2-54-175-195-234.compute-1.amazonaws.com '/bin/sh -c '"'"'sudo -H -S -n -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-ikmwebotpbdknkasxrzfkuctihqsiqsc; /usr/bin/python /home/ec2-user/.ansible/tmp/ansible-tmp-1540548231.0-167765800213755/yum.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+Escalation succeeded
+Escalation succeeded
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, '\r\n{"msg": "", "invocation": {"module_args": {"allow_downgrade": false, "name": ["httpd"], "bugfix": false, "list": null, "disable_gpg_check": false, "conf_file": null, "install_repoquery": true, "validate_certs": true, "state": "latest", "disablerepo": null, "update_cache": false, "disable_plugin": [], "enablerepo": null, "exclude": null, "security": false, "update_only": false, "enable_plugin": [], "installroot": "/", "skip_broken": false}}, "changed": false, "results": ["All packages providing httpd are up to date", ""], "rc": 0}\r\n', 'Shared connection to ec2-54-175-195-234.compute-1.amazonaws.com closed.\r\n')
+<ec2-54-175-195-234.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 ec2-54-175-195-234.compute-1.amazonaws.com '/bin/sh -c '"'"'rm -f -r /home/ec2-user/.ansible/tmp/ansible-tmp-1540548231.0-167765800213755/ > /dev/null 2>&1 && sleep 0'"'"''
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, '\r\n{"msg": "", "invocation": {"module_args": {"allow_downgrade": false, "name": ["httpd"], "bugfix": false, "list": null, "disable_gpg_check": false, "conf_file": null, "install_repoquery": true, "validate_certs": true, "state": "latest", "disablerepo": null, "update_cache": false, "disable_plugin": [], "enablerepo": null, "exclude": null, "security": false, "update_only": false, "enable_plugin": [], "installroot": "/", "skip_broken": false}}, "changed": false, "results": ["All packages providing httpd are up to date", ""], "rc": 0}\r\n', 'Shared connection to ec2-35-175-234-151.compute-1.amazonaws.com closed.\r\n')
+<ec2-35-175-234-151.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 ec2-35-175-234-151.compute-1.amazonaws.com '/bin/sh -c '"'"'rm -f -r /home/ec2-user/.ansible/tmp/ansible-tmp-1540548230.98-180080720207544/ > /dev/null 2>&1 && sleep 0'"'"''
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, '', '')
+ok: [ec2-54-175-195-234.compute-1.amazonaws.com] => {
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "allow_downgrade": false, 
+            "bugfix": false, 
+            "conf_file": null, 
+            "disable_gpg_check": false, 
+            "disable_plugin": [], 
+            "disablerepo": null, 
+            "enable_plugin": [], 
+            "enablerepo": null, 
+            "exclude": null, 
+            "install_repoquery": true, 
+            "installroot": "/", 
+            "list": null, 
+            "name": [
+                "httpd"
+            ], 
+            "security": false, 
+            "skip_broken": false, 
+            "state": "latest", 
+            "update_cache": false, 
+            "update_only": false, 
+            "validate_certs": true
+        }
+    }, 
+    "msg": "", 
+    "rc": 0, 
+    "results": [
+        "All packages providing httpd are up to date", 
+        ""
+    ]
+}
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, '', '')
+ok: [ec2-35-175-234-151.compute-1.amazonaws.com] => {
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "allow_downgrade": false, 
+            "bugfix": false, 
+            "conf_file": null, 
+            "disable_gpg_check": false, 
+            "disable_plugin": [], 
+            "disablerepo": null, 
+            "enable_plugin": [], 
+            "enablerepo": null, 
+            "exclude": null, 
+            "install_repoquery": true, 
+            "installroot": "/", 
+            "list": null, 
+            "name": [
+                "httpd"
+            ], 
+            "security": false, 
+            "skip_broken": false, 
+            "state": "latest", 
+            "update_cache": false, 
+            "update_only": false, 
+            "validate_certs": true
+        }
+    }, 
+    "msg": "", 
+    "rc": 0, 
+    "results": [
+        "All packages providing httpd are up to date", 
+        ""
+    ]
+}
+
+TASK [copy html file] ******************************************************************************************************************************
+task path: /home/ec2-user/environment/ansi/webdeploy.yaml:8
+<ec2-35-175-234-151.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 ec2-35-175-234-151.compute-1.amazonaws.com '/bin/sh -c '"'"'echo ~ec2-user && sleep 0'"'"''
+<ec2-54-175-195-234.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, '/home/ec2-user\n', '')
+<ec2-35-175-234-151.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 ec2-35-175-234-151.compute-1.amazonaws.com '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.88-221532228235706 `" && echo ansible-tmp-1540548233.88-221532228235706="` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.88-221532228235706 `" ) && sleep 0'"'"''
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 ec2-54-175-195-234.compute-1.amazonaws.com '/bin/sh -c '"'"'echo ~ec2-user && sleep 0'"'"''
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, 'ansible-tmp-1540548233.88-221532228235706=/home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.88-221532228235706\n', '')
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, '/home/ec2-user\n', '')
+<ec2-54-175-195-234.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 ec2-54-175-195-234.compute-1.amazonaws.com '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.91-277494184312961 `" && echo ansible-tmp-1540548233.91-277494184312961="` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.91-277494184312961 `" ) && sleep 0'"'"''
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, 'ansible-tmp-1540548233.91-277494184312961=/home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.91-277494184312961\n', '')
+Using module file /usr/lib/python2.6/site-packages/ansible/modules/files/stat.py
+<ec2-54-175-195-234.compute-1.amazonaws.com> PUT /home/ec2-user/.ansible/tmp/ansible-local-7181nYbNAl/tmpl1rn8p TO /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.91-277494184312961/stat.py
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 '[ec2-54-175-195-234.compute-1.amazonaws.com]'
+Using module file /usr/lib/python2.6/site-packages/ansible/modules/files/stat.py
+<ec2-35-175-234-151.compute-1.amazonaws.com> PUT /home/ec2-user/.ansible/tmp/ansible-local-7181nYbNAl/tmpQR43OF TO /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.88-221532228235706/stat.py
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 '[ec2-35-175-234-151.compute-1.amazonaws.com]'
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, 'sftp> put /home/ec2-user/.ansible/tmp/ansible-local-7181nYbNAl/tmpl1rn8p /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.91-277494184312961/stat.py\n', '')
+<ec2-54-175-195-234.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 ec2-54-175-195-234.compute-1.amazonaws.com '/bin/sh -c '"'"'chmod u+x /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.91-277494184312961/ /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.91-277494184312961/stat.py && sleep 0'"'"''
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, 'sftp> put /home/ec2-user/.ansible/tmp/ansible-local-7181nYbNAl/tmpQR43OF /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.88-221532228235706/stat.py\n', '')
+<ec2-35-175-234-151.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 ec2-35-175-234-151.compute-1.amazonaws.com '/bin/sh -c '"'"'chmod u+x /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.88-221532228235706/ /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.88-221532228235706/stat.py && sleep 0'"'"''
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, '', '')
+<ec2-35-175-234-151.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 -tt ec2-35-175-234-151.compute-1.amazonaws.com '/bin/sh -c '"'"'sudo -H -S -n -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-qdimogyowizufjglkzmmwbgcusdegdgy; /usr/bin/python /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.88-221532228235706/stat.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, '', '')
+<ec2-54-175-195-234.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 -tt ec2-54-175-195-234.compute-1.amazonaws.com '/bin/sh -c '"'"'sudo -H -S -n -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-jpcuueezyamqisyhmbwgrhrlflcpubjs; /usr/bin/python /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.91-277494184312961/stat.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+Escalation succeeded
+Escalation succeeded
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, '\r\n{"invocation": {"module_args": {"checksum_algorithm": "sha1", "get_checksum": true, "follow": false, "checksum_algo": "sha1", "path": "/var/www/html", "get_md5": null, "get_mime": true, "get_attributes": true}}, "stat": {"charset": "binary", "uid": 0, "exists": true, "attr_flags": "", "woth": false, "isreg": false, "device_type": 0, "mtime": 1540547697.0467093, "block_size": 4096, "inode": 12587670, "isgid": false, "size": 24, "executable": true, "isuid": false, "readable": true, "version": "18446744073463677951", "pw_name": "root", "gid": 0, "ischr": false, "wusr": true, "writeable": true, "mimetype": "inode/directory", "blocks": 0, "xoth": true, "islnk": false, "nlink": 2, "issock": false, "rgrp": true, "gr_name": "root", "path": "/var/www/html", "xusr": true, "atime": 1535779935.0, "isdir": true, "ctime": 1540547697.0467093, "isblk": false, "wgrp": false, "xgrp": true, "dev": 51713, "roth": true, "isfifo": false, "mode": "0755", "rusr": true, "attributes": []}, "changed": false}\r\n', 'Shared connection to ec2-54-175-195-234.compute-1.amazonaws.com closed.\r\n')
+Using module file /usr/lib/python2.6/site-packages/ansible/modules/files/stat.py
+<ec2-54-175-195-234.compute-1.amazonaws.com> PUT /home/ec2-user/.ansible/tmp/ansible-local-7181nYbNAl/tmpQR43OF TO /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.91-277494184312961/stat.py
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 '[ec2-54-175-195-234.compute-1.amazonaws.com]'
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, '\r\n{"invocation": {"module_args": {"checksum_algorithm": "sha1", "get_checksum": true, "follow": false, "checksum_algo": "sha1", "path": "/var/www/html", "get_md5": null, "get_mime": true, "get_attributes": true}}, "stat": {"charset": "binary", "uid": 0, "exists": true, "attr_flags": "", "woth": false, "isreg": false, "device_type": 0, "mtime": 1540547697.047268, "block_size": 4096, "inode": 12587670, "isgid": false, "size": 24, "executable": true, "isuid": false, "readable": true, "version": "18446744073540201980", "pw_name": "root", "gid": 0, "ischr": false, "wusr": true, "writeable": true, "mimetype": "inode/directory", "blocks": 0, "xoth": true, "islnk": false, "nlink": 2, "issock": false, "rgrp": true, "gr_name": "root", "path": "/var/www/html", "xusr": true, "atime": 1535779935.0, "isdir": true, "ctime": 1540547697.047268, "isblk": false, "wgrp": false, "xgrp": true, "dev": 51713, "roth": true, "isfifo": false, "mode": "0755", "rusr": true, "attributes": []}, "changed": false}\r\n', 'Shared connection to ec2-35-175-234-151.compute-1.amazonaws.com closed.\r\n')
+Using module file /usr/lib/python2.6/site-packages/ansible/modules/files/stat.py
+<ec2-35-175-234-151.compute-1.amazonaws.com> PUT /home/ec2-user/.ansible/tmp/ansible-local-7181nYbNAl/tmpaiLDyh TO /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.88-221532228235706/stat.py
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 '[ec2-35-175-234-151.compute-1.amazonaws.com]'
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, 'sftp> put /home/ec2-user/.ansible/tmp/ansible-local-7181nYbNAl/tmpaiLDyh /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.88-221532228235706/stat.py\n', '')
+<ec2-35-175-234-151.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 ec2-35-175-234-151.compute-1.amazonaws.com '/bin/sh -c '"'"'chmod u+x /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.88-221532228235706/ /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.88-221532228235706/stat.py && sleep 0'"'"''
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, 'sftp> put /home/ec2-user/.ansible/tmp/ansible-local-7181nYbNAl/tmpQR43OF /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.91-277494184312961/stat.py\n', '')
+<ec2-54-175-195-234.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 ec2-54-175-195-234.compute-1.amazonaws.com '/bin/sh -c '"'"'chmod u+x /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.91-277494184312961/ /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.91-277494184312961/stat.py && sleep 0'"'"''
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, '', '')
+<ec2-54-175-195-234.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 -tt ec2-54-175-195-234.compute-1.amazonaws.com '/bin/sh -c '"'"'sudo -H -S -n -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-ortovjtfjxlslxmemrfkokwbybajracu; /usr/bin/python /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.91-277494184312961/stat.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, '', '')
+<ec2-35-175-234-151.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 -tt ec2-35-175-234-151.compute-1.amazonaws.com '/bin/sh -c '"'"'sudo -H -S -n -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-iqbnjyeocxatiekxaqocxugdhsunzghb; /usr/bin/python /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.88-221532228235706/stat.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+Escalation succeeded
+Escalation succeeded
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, '\r\n{"invocation": {"module_args": {"checksum_algorithm": "sha1", "get_checksum": true, "follow": false, "checksum_algo": "sha1", "path": "/var/www/html/index.html", "get_md5": null, "get_mime": true, "get_attributes": true}}, "stat": {"charset": "us-ascii", "uid": 0, "exists": true, "attr_flags": "", "woth": false, "isreg": true, "device_type": 0, "mtime": 1540547696.7107122, "block_size": 4096, "inode": 4203609, "isgid": false, "size": 30, "executable": false, "isuid": false, "readable": true, "version": "18446744072845140523", "pw_name": "root", "gid": 0, "ischr": false, "wusr": true, "writeable": true, "mimetype": "text/html", "blocks": 8, "xoth": false, "islnk": false, "nlink": 1, "issock": false, "rgrp": true, "gr_name": "root", "path": "/var/www/html/index.html", "xusr": false, "atime": 1540547696.7107122, "isdir": false, "ctime": 1540547697.0467093, "isblk": false, "wgrp": false, "checksum": "dfacbdefdf40626d5f14b60ab488c39cd0ee3ffb", "dev": 51713, "roth": true, "isfifo": false, "mode": "0644", "xgrp": false, "rusr": true, "attributes": []}, "changed": false}\r\n', 'Shared connection to ec2-54-175-195-234.compute-1.amazonaws.com closed.\r\n')
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, '\r\n{"invocation": {"module_args": {"checksum_algorithm": "sha1", "get_checksum": true, "follow": false, "checksum_algo": "sha1", "path": "/var/www/html/index.html", "get_md5": null, "get_mime": true, "get_attributes": true}}, "stat": {"charset": "us-ascii", "uid": 0, "exists": true, "attr_flags": "", "woth": false, "isreg": true, "device_type": 0, "mtime": 1540547696.7112787, "block_size": 4096, "inode": 4203225, "isgid": false, "size": 30, "executable": false, "isuid": false, "readable": true, "version": "162016057", "pw_name": "root", "gid": 0, "ischr": false, "wusr": true, "writeable": true, "mimetype": "text/html", "blocks": 8, "xoth": false, "islnk": false, "nlink": 1, "issock": false, "rgrp": true, "gr_name": "root", "path": "/var/www/html/index.html", "xusr": false, "atime": 1540547696.7112787, "isdir": false, "ctime": 1540547697.047268, "isblk": false, "wgrp": false, "checksum": "dfacbdefdf40626d5f14b60ab488c39cd0ee3ffb", "dev": 51713, "roth": true, "isfifo": false, "mode": "0644", "xgrp": false, "rusr": true, "attributes": []}, "changed": false}\r\n', 'Shared connection to ec2-35-175-234-151.compute-1.amazonaws.com closed.\r\n')
+Using module file /usr/lib/python2.6/site-packages/ansible/modules/files/file.py
+<ec2-35-175-234-151.compute-1.amazonaws.com> PUT /home/ec2-user/.ansible/tmp/ansible-local-7181nYbNAl/tmpz1NJZw TO /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.88-221532228235706/file.py
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 '[ec2-35-175-234-151.compute-1.amazonaws.com]'
+Using module file /usr/lib/python2.6/site-packages/ansible/modules/files/file.py
+<ec2-54-175-195-234.compute-1.amazonaws.com> PUT /home/ec2-user/.ansible/tmp/ansible-local-7181nYbNAl/tmpaiLDyh TO /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.91-277494184312961/file.py
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 '[ec2-54-175-195-234.compute-1.amazonaws.com]'
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, 'sftp> put /home/ec2-user/.ansible/tmp/ansible-local-7181nYbNAl/tmpz1NJZw /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.88-221532228235706/file.py\n', '')
+<ec2-35-175-234-151.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 ec2-35-175-234-151.compute-1.amazonaws.com '/bin/sh -c '"'"'chmod u+x /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.88-221532228235706/ /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.88-221532228235706/file.py && sleep 0'"'"''
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, 'sftp> put /home/ec2-user/.ansible/tmp/ansible-local-7181nYbNAl/tmpaiLDyh /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.91-277494184312961/file.py\n', '')
+<ec2-54-175-195-234.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 ec2-54-175-195-234.compute-1.amazonaws.com '/bin/sh -c '"'"'chmod u+x /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.91-277494184312961/ /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.91-277494184312961/file.py && sleep 0'"'"''
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, '', '')
+<ec2-54-175-195-234.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 -tt ec2-54-175-195-234.compute-1.amazonaws.com '/bin/sh -c '"'"'sudo -H -S -n -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-zzgncwjniewmofpwfydscawsavvgcrpj; /usr/bin/python /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.91-277494184312961/file.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, '', '')
+<ec2-35-175-234-151.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 -tt ec2-35-175-234-151.compute-1.amazonaws.com '/bin/sh -c '"'"'sudo -H -S -n -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-flwohibxlpsbzhldqdcsmjdlukbgrjjv; /usr/bin/python /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.88-221532228235706/file.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+Escalation succeeded
+Escalation succeeded
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, '\r\n{"group": "root", "uid": 0, "changed": false, "owner": "root", "state": "file", "gid": 0, "mode": "0644", "path": "/var/www/html/index.html", "invocation": {"module_args": {"directory_mode": null, "force": false, "remote_src": null, "_original_basename": "index.html", "path": "/var/www/html/index.html", "owner": null, "follow": true, "group": null, "unsafe_writes": null, "state": "file", "content": null, "serole": null, "setype": null, "dest": "/var/www/html", "selevel": null, "regexp": null, "src": null, "seuser": null, "recurse": false, "_diff_peek": null, "delimiter": null, "mode": null, "attributes": null, "backup": null}}, "diff": {"after": {"path": "/var/www/html/index.html"}, "before": {"path": "/var/www/html/index.html"}}, "size": 30}\r\n', 'Shared connection to ec2-35-175-234-151.compute-1.amazonaws.com closed.\r\n')
+<ec2-35-175-234-151.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 ec2-35-175-234-151.compute-1.amazonaws.com '/bin/sh -c '"'"'rm -f -r /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.88-221532228235706/ > /dev/null 2>&1 && sleep 0'"'"''
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, '\r\n{"group": "root", "uid": 0, "changed": false, "owner": "root", "state": "file", "gid": 0, "mode": "0644", "path": "/var/www/html/index.html", "invocation": {"module_args": {"directory_mode": null, "force": false, "remote_src": null, "_original_basename": "index.html", "path": "/var/www/html/index.html", "owner": null, "follow": true, "group": null, "unsafe_writes": null, "state": "file", "content": null, "serole": null, "setype": null, "dest": "/var/www/html", "selevel": null, "regexp": null, "src": null, "seuser": null, "recurse": false, "_diff_peek": null, "delimiter": null, "mode": null, "attributes": null, "backup": null}}, "diff": {"after": {"path": "/var/www/html/index.html"}, "before": {"path": "/var/www/html/index.html"}}, "size": 30}\r\n', 'Shared connection to ec2-54-175-195-234.compute-1.amazonaws.com closed.\r\n')
+<ec2-54-175-195-234.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 ec2-54-175-195-234.compute-1.amazonaws.com '/bin/sh -c '"'"'rm -f -r /home/ec2-user/.ansible/tmp/ansible-tmp-1540548233.91-277494184312961/ > /dev/null 2>&1 && sleep 0'"'"''
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, '', '')
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, '', '')
+ok: [ec2-35-175-234-151.compute-1.amazonaws.com] => {
+    "changed": false, 
+    "checksum": "dfacbdefdf40626d5f14b60ab488c39cd0ee3ffb", 
+    "dest": "/var/www/html/index.html", 
+    "diff": {
+        "after": {
+            "path": "/var/www/html/index.html"
+        }, 
+        "before": {
+            "path": "/var/www/html/index.html"
+        }
+    }, 
+    "gid": 0, 
+    "group": "root", 
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null, 
+            "_original_basename": "index.html", 
+            "attributes": null, 
+            "backup": null, 
+            "content": null, 
+            "delimiter": null, 
+            "dest": "/var/www/html", 
+            "directory_mode": null, 
+            "follow": true, 
+            "force": false, 
+            "group": null, 
+            "mode": null, 
+            "owner": null, 
+            "path": "/var/www/html/index.html", 
+            "recurse": false, 
+            "regexp": null, 
+            "remote_src": null, 
+            "selevel": null, 
+            "serole": null, 
+            "setype": null, 
+            "seuser": null, 
+            "src": null, 
+            "state": "file", 
+            "unsafe_writes": null
+        }
+    }, 
+    "mode": "0644", 
+    "owner": "root", 
+    "path": "/var/www/html/index.html", 
+    "size": 30, 
+    "state": "file", 
+    "uid": 0
+}
+ok: [ec2-54-175-195-234.compute-1.amazonaws.com] => {
+    "changed": false, 
+    "checksum": "dfacbdefdf40626d5f14b60ab488c39cd0ee3ffb", 
+    "dest": "/var/www/html/index.html", 
+    "diff": {
+        "after": {
+            "path": "/var/www/html/index.html"
+        }, 
+        "before": {
+            "path": "/var/www/html/index.html"
+        }
+    }, 
+    "gid": 0, 
+    "group": "root", 
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null, 
+            "_original_basename": "index.html", 
+            "attributes": null, 
+            "backup": null, 
+            "content": null, 
+            "delimiter": null, 
+            "dest": "/var/www/html", 
+            "directory_mode": null, 
+            "follow": true, 
+            "force": false, 
+            "group": null, 
+            "mode": null, 
+            "owner": null, 
+            "path": "/var/www/html/index.html", 
+            "recurse": false, 
+            "regexp": null, 
+            "remote_src": null, 
+            "selevel": null, 
+            "serole": null, 
+            "setype": null, 
+            "seuser": null, 
+            "src": null, 
+            "state": "file", 
+            "unsafe_writes": null
+        }
+    }, 
+    "mode": "0644", 
+    "owner": "root", 
+    "path": "/var/www/html/index.html", 
+    "size": 30, 
+    "state": "file", 
+    "uid": 0
+}
+
+TASK [Start service httpd, if not started] *********************************************************************************************************
+task path: /home/ec2-user/environment/ansi/webdeploy.yaml:12
+<ec2-35-175-234-151.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 ec2-35-175-234-151.compute-1.amazonaws.com '/bin/sh -c '"'"'echo ~ec2-user && sleep 0'"'"''
+<ec2-54-175-195-234.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, '/home/ec2-user\n', '')
+<ec2-35-175-234-151.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 ec2-35-175-234-151.compute-1.amazonaws.com '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1540548234.99-188898261526547 `" && echo ansible-tmp-1540548234.99-188898261526547="` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1540548234.99-188898261526547 `" ) && sleep 0'"'"''
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 ec2-54-175-195-234.compute-1.amazonaws.com '/bin/sh -c '"'"'echo ~ec2-user && sleep 0'"'"''
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, 'ansible-tmp-1540548234.99-188898261526547=/home/ec2-user/.ansible/tmp/ansible-tmp-1540548234.99-188898261526547\n', '')
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, '/home/ec2-user\n', '')
+<ec2-54-175-195-234.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 ec2-54-175-195-234.compute-1.amazonaws.com '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1540548235.02-165057348446250 `" && echo ansible-tmp-1540548235.02-165057348446250="` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1540548235.02-165057348446250 `" ) && sleep 0'"'"''
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, 'ansible-tmp-1540548235.02-165057348446250=/home/ec2-user/.ansible/tmp/ansible-tmp-1540548235.02-165057348446250\n', '')
+Using module file /usr/lib/python2.6/site-packages/ansible/modules/system/systemd.py
+<ec2-54-175-195-234.compute-1.amazonaws.com> PUT /home/ec2-user/.ansible/tmp/ansible-local-7181nYbNAl/tmpl1rn8p TO /home/ec2-user/.ansible/tmp/ansible-tmp-1540548235.02-165057348446250/systemd.py
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 '[ec2-54-175-195-234.compute-1.amazonaws.com]'
+Using module file /usr/lib/python2.6/site-packages/ansible/modules/system/systemd.py
+<ec2-35-175-234-151.compute-1.amazonaws.com> PUT /home/ec2-user/.ansible/tmp/ansible-local-7181nYbNAl/tmpQR43OF TO /home/ec2-user/.ansible/tmp/ansible-tmp-1540548234.99-188898261526547/systemd.py
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 '[ec2-35-175-234-151.compute-1.amazonaws.com]'
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, 'sftp> put /home/ec2-user/.ansible/tmp/ansible-local-7181nYbNAl/tmpl1rn8p /home/ec2-user/.ansible/tmp/ansible-tmp-1540548235.02-165057348446250/systemd.py\n', '')
+<ec2-54-175-195-234.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 ec2-54-175-195-234.compute-1.amazonaws.com '/bin/sh -c '"'"'chmod u+x /home/ec2-user/.ansible/tmp/ansible-tmp-1540548235.02-165057348446250/ /home/ec2-user/.ansible/tmp/ansible-tmp-1540548235.02-165057348446250/systemd.py && sleep 0'"'"''
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, 'sftp> put /home/ec2-user/.ansible/tmp/ansible-local-7181nYbNAl/tmpQR43OF /home/ec2-user/.ansible/tmp/ansible-tmp-1540548234.99-188898261526547/systemd.py\n', '')
+<ec2-35-175-234-151.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 ec2-35-175-234-151.compute-1.amazonaws.com '/bin/sh -c '"'"'chmod u+x /home/ec2-user/.ansible/tmp/ansible-tmp-1540548234.99-188898261526547/ /home/ec2-user/.ansible/tmp/ansible-tmp-1540548234.99-188898261526547/systemd.py && sleep 0'"'"''
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, '', '')
+<ec2-35-175-234-151.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 -tt ec2-35-175-234-151.compute-1.amazonaws.com '/bin/sh -c '"'"'sudo -H -S -n -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-tsurmirmwrzgshcytoofexpowaqvqbgf; /usr/bin/python /home/ec2-user/.ansible/tmp/ansible-tmp-1540548234.99-188898261526547/systemd.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, '', '')
+<ec2-54-175-195-234.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 -tt ec2-54-175-195-234.compute-1.amazonaws.com '/bin/sh -c '"'"'sudo -H -S -n -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-dzusxfxlpgjdghryxiadqadwujebwzci; /usr/bin/python /home/ec2-user/.ansible/tmp/ansible-tmp-1540548235.02-165057348446250/systemd.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+Escalation succeeded
+Escalation succeeded
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, '\r\n{"status": {"ExecStart": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -DFOREGROUND ; ignore_errors=no ; start_time=[Fri 2018-10-26 10:00:33 UTC] ; stop_time=[n/a] ; pid=1589 ; code=(null) ; status=0/0 }", "TimeoutStopUSec": "1min 30s", "ControlGroup": "/system.slice/httpd.service", "RuntimeDirectoryMode": "0755", "GuessMainPID": "yes", "ExecMainCode": "0", "UnitFileState": "enabled", "ExecMainPID": "1589", "LimitSIGPENDING": "3805", "FileDescriptorStoreMax": "0", "LoadState": "loaded", "ProtectHome": "no", "TTYVTDisallocate": "no", "StartLimitInterval": "10000000", "WatchdogTimestampMonotonic": "9007711636", "LimitSTACK": "18446744073709551615", "ActiveEnterTimestampMonotonic": "9007711662", "StandardError": "inherit", "AssertTimestamp": "Fri 2018-10-26 10:00:33 UTC", "IgnoreOnSnapshot": "no", "StartLimitAction": "none", "CPUSchedulingPriority": "0", "KillSignal": "28", "LimitFSIZE": "18446744073709551615", "IgnoreOnIsolate": "no", "LimitCPU": "18446744073709551615", "Environment": "LANG=C", "WatchdogTimestamp": "Fri 2018-10-26 10:00:33 UTC", "ActiveEnterTimestamp": "Fri 2018-10-26 10:00:33 UTC", "MemoryLimit": "18446744073709551615", "CanStart": "yes", "JobTimeoutAction": "none", "NoNewPrivileges": "no", "Before": "shutdown.target multi-user.target", "LimitAS": "18446744073709551615", "RootDirectoryStartOnly": "no", "InactiveExitTimestampMonotonic": "9007676349", "SendSIGHUP": "no", "TimeoutStartUSec": "1min 30s", "Type": "notify", "SyslogPriority": "30", "SameProcessGroup": "no", "LimitNPROC": "3805", "UMask": "0022", "NonBlocking": "no", "DevicePolicy": "auto", "ExecMainStartTimestamp": "Fri 2018-10-26 10:00:33 UTC", "CapabilityBoundingSet": "18446744073709551615", "TTYReset": "no", "OOMScoreAdjust": "0", "Documentation": "man:httpd.service(8)", "StartLimitBurst": "5", "RefuseManualStart": "no", "KillMode": "mixed", "SyslogLevelPrefix": "yes", "LimitRSS": "18446744073709551615", "LimitRTPRIO": "0", "Delegate": "no", "ExecReload": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -k graceful ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", "TasksCurrent": "18446744073709551615", "LimitCORE": "18446744073709551615", "JobTimeoutUSec": "0", "TimerSlackNSec": "50000", "SubState": "running", "CPUSchedulingResetOnFork": "no", "Result": "success", "CPUShares": "18446744073709551615", "ConditionResult": "yes", "ConditionTimestampMonotonic": "9007675818", "MainPID": "1589", "StartupBlockIOWeight": "18446744073709551615", "InactiveExitTimestamp": "Fri 2018-10-26 10:00:33 UTC", "FragmentPath": "/usr/lib/systemd/system/httpd.service", "StartupCPUShares": "18446744073709551615", "WatchdogUSec": "0", "ActiveState": "active", "Nice": "0", "LimitDATA": "18446744073709551615", "UnitFilePreset": "disabled", "MemoryCurrent": "18446744073709551615", "LimitRTTIME": "18446744073709551615", "WantedBy": "multi-user.target", "SecureBits": "0", "RestartUSec": "100ms", "ConditionTimestamp": "Fri 2018-10-26 10:00:33 UTC", "CPUAccounting": "no", "RemainAfterExit": "no", "RequiresMountsFor": "/var/tmp", "PrivateNetwork": "no", "Restart": "no", "CPUSchedulingPolicy": "0", "LimitNOFILE": "4096", "SendSIGKILL": "yes", "StatusErrno": "0", "RefuseManualStop": "no", "SystemCallErrorNumber": "0", "TasksAccounting": "no", "NeedDaemonReload": "no", "TTYVHangup": "no", "StandardInput": "null", "AssertTimestampMonotonic": "9007675819", "DefaultDependencies": "yes", "Requires": "-.mount basic.target", "TasksMax": "18446744073709551615", "CPUQuotaPerSecUSec": "infinity", "ExecMainStatus": "0", "LimitMEMLOCK": "65536", "StopWhenUnneeded": "no", "LimitMSGQUEUE": "819200", "AmbientCapabilities": "0", "Slice": "system.slice", "ExecMainExitTimestampMonotonic": "0", "NotifyAccess": "main", "PermissionsStartOnly": "no", "BlockIOAccounting": "no", "CanStop": "yes", "PrivateTmp": "yes", "OnFailureJobMode": "replace", "AssertResult": "yes", "LimitLOCKS": "18446744073709551615", "ExecMainStartTimestampMonotonic": "9007676322", "AllowIsolate": "no", "Wants": "httpd-init.service system.slice", "After": "nss-lookup.target systemd-journald.socket remote-fs.target system.slice httpd-init.service network.target tmp.mount -.mount basic.target", "FailureAction": "none", "CanIsolate": "no", "Conflicts": "shutdown.target", "StandardOutput": "journal", "MountFlags": "0", "InactiveEnterTimestampMonotonic": "0", "StatusText": "Total requests: 0; Idle/Busy workers 100/0;Requests/sec: 0; Bytes served/sec:   0 B/sec", "MemoryAccounting": "no", "IgnoreSIGPIPE": "yes", "Transient": "no", "IOScheduling": "0", "Description": "The Apache HTTP Server", "ActiveExitTimestampMonotonic": "0", "CanReload": "yes", "ControlPID": "0", "LimitNICE": "0", "BlockIOWeight": "18446744073709551615", "Names": "httpd.service", "ProtectSystem": "no", "PrivateDevices": "no", "Id": "httpd.service"}, "name": "httpd", "changed": false, "enabled": true, "state": "started", "invocation": {"module_args": {"no_block": false, "force": null, "name": "httpd", "enabled": true, "daemon_reload": false, "state": "started", "user": false, "masked": null}}}\r\n', 'Shared connection to ec2-35-175-234-151.compute-1.amazonaws.com closed.\r\n')
+<ec2-35-175-234-151.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-35-175-234-151.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/44713068a9 ec2-35-175-234-151.compute-1.amazonaws.com '/bin/sh -c '"'"'rm -f -r /home/ec2-user/.ansible/tmp/ansible-tmp-1540548234.99-188898261526547/ > /dev/null 2>&1 && sleep 0'"'"''
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, '\r\n{"status": {"ExecStart": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -DFOREGROUND ; ignore_errors=no ; start_time=[Fri 2018-10-26 10:00:33 UTC] ; stop_time=[n/a] ; pid=1611 ; code=(null) ; status=0/0 }", "TimeoutStopUSec": "1min 30s", "ControlGroup": "/system.slice/httpd.service", "RuntimeDirectoryMode": "0755", "GuessMainPID": "yes", "ExecMainCode": "0", "UnitFileState": "enabled", "ExecMainPID": "1611", "LimitSIGPENDING": "3805", "FileDescriptorStoreMax": "0", "LoadState": "loaded", "ProtectHome": "no", "TTYVTDisallocate": "no", "StartLimitInterval": "10000000", "WatchdogTimestampMonotonic": "9010744081", "LimitSTACK": "18446744073709551615", "ActiveEnterTimestampMonotonic": "9010744120", "StandardError": "inherit", "AssertTimestamp": "Fri 2018-10-26 10:00:33 UTC", "IgnoreOnSnapshot": "no", "StartLimitAction": "none", "CPUSchedulingPriority": "0", "KillSignal": "28", "LimitFSIZE": "18446744073709551615", "IgnoreOnIsolate": "no", "LimitCPU": "18446744073709551615", "Environment": "LANG=C", "WatchdogTimestamp": "Fri 2018-10-26 10:00:33 UTC", "ActiveEnterTimestamp": "Fri 2018-10-26 10:00:33 UTC", "MemoryLimit": "18446744073709551615", "CanStart": "yes", "JobTimeoutAction": "none", "NoNewPrivileges": "no", "Before": "shutdown.target multi-user.target", "LimitAS": "18446744073709551615", "RootDirectoryStartOnly": "no", "InactiveExitTimestampMonotonic": "9010706898", "SendSIGHUP": "no", "TimeoutStartUSec": "1min 30s", "Type": "notify", "SyslogPriority": "30", "SameProcessGroup": "no", "LimitNPROC": "3805", "UMask": "0022", "NonBlocking": "no", "DevicePolicy": "auto", "ExecMainStartTimestamp": "Fri 2018-10-26 10:00:33 UTC", "CapabilityBoundingSet": "18446744073709551615", "TTYReset": "no", "OOMScoreAdjust": "0", "Documentation": "man:httpd.service(8)", "StartLimitBurst": "5", "RefuseManualStart": "no", "KillMode": "mixed", "SyslogLevelPrefix": "yes", "LimitRSS": "18446744073709551615", "LimitRTPRIO": "0", "Delegate": "no", "ExecReload": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -k graceful ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", "TasksCurrent": "18446744073709551615", "LimitCORE": "18446744073709551615", "JobTimeoutUSec": "0", "TimerSlackNSec": "50000", "SubState": "running", "CPUSchedulingResetOnFork": "no", "Result": "success", "CPUShares": "18446744073709551615", "ConditionResult": "yes", "ConditionTimestampMonotonic": "9010706336", "MainPID": "1611", "StartupBlockIOWeight": "18446744073709551615", "InactiveExitTimestamp": "Fri 2018-10-26 10:00:33 UTC", "FragmentPath": "/usr/lib/systemd/system/httpd.service", "StartupCPUShares": "18446744073709551615", "WatchdogUSec": "0", "ActiveState": "active", "Nice": "0", "LimitDATA": "18446744073709551615", "UnitFilePreset": "disabled", "MemoryCurrent": "18446744073709551615", "LimitRTTIME": "18446744073709551615", "WantedBy": "multi-user.target", "SecureBits": "0", "RestartUSec": "100ms", "ConditionTimestamp": "Fri 2018-10-26 10:00:33 UTC", "CPUAccounting": "no", "RemainAfterExit": "no", "RequiresMountsFor": "/var/tmp", "PrivateNetwork": "no", "Restart": "no", "CPUSchedulingPolicy": "0", "LimitNOFILE": "4096", "SendSIGKILL": "yes", "StatusErrno": "0", "RefuseManualStop": "no", "SystemCallErrorNumber": "0", "TasksAccounting": "no", "NeedDaemonReload": "no", "TTYVHangup": "no", "StandardInput": "null", "AssertTimestampMonotonic": "9010706338", "DefaultDependencies": "yes", "Requires": "-.mount basic.target", "TasksMax": "18446744073709551615", "CPUQuotaPerSecUSec": "infinity", "ExecMainStatus": "0", "LimitMEMLOCK": "65536", "StopWhenUnneeded": "no", "LimitMSGQUEUE": "819200", "AmbientCapabilities": "0", "Slice": "system.slice", "ExecMainExitTimestampMonotonic": "0", "NotifyAccess": "main", "PermissionsStartOnly": "no", "BlockIOAccounting": "no", "CanStop": "yes", "PrivateTmp": "yes", "OnFailureJobMode": "replace", "AssertResult": "yes", "LimitLOCKS": "18446744073709551615", "ExecMainStartTimestampMonotonic": "9010706872", "AllowIsolate": "no", "Wants": "system.slice httpd-init.service", "After": "remote-fs.target systemd-journald.socket network.target nss-lookup.target httpd-init.service tmp.mount basic.target system.slice -.mount", "FailureAction": "none", "CanIsolate": "no", "Conflicts": "shutdown.target", "StandardOutput": "journal", "MountFlags": "0", "InactiveEnterTimestampMonotonic": "0", "StatusText": "Total requests: 0; Idle/Busy workers 100/0;Requests/sec: 0; Bytes served/sec:   0 B/sec", "MemoryAccounting": "no", "IgnoreSIGPIPE": "yes", "Transient": "no", "IOScheduling": "0", "Description": "The Apache HTTP Server", "ActiveExitTimestampMonotonic": "0", "CanReload": "yes", "ControlPID": "0", "LimitNICE": "0", "BlockIOWeight": "18446744073709551615", "Names": "httpd.service", "ProtectSystem": "no", "PrivateDevices": "no", "Id": "httpd.service"}, "name": "httpd", "changed": false, "enabled": true, "state": "started", "invocation": {"module_args": {"no_block": false, "force": null, "name": "httpd", "enabled": true, "daemon_reload": false, "state": "started", "user": false, "masked": null}}}\r\n', 'Shared connection to ec2-54-175-195-234.compute-1.amazonaws.com closed.\r\n')
+<ec2-54-175-195-234.compute-1.amazonaws.com> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+<ec2-54-175-195-234.compute-1.amazonaws.com> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/environment/webkey.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=ec2-user -o ConnectTimeout=10 -o ControlPath=/home/ec2-user/.ansible/cp/3ef7469ef6 ec2-54-175-195-234.compute-1.amazonaws.com '/bin/sh -c '"'"'rm -f -r /home/ec2-user/.ansible/tmp/ansible-tmp-1540548235.02-165057348446250/ > /dev/null 2>&1 && sleep 0'"'"''
+<ec2-54-175-195-234.compute-1.amazonaws.com> (0, '', '')
+<ec2-35-175-234-151.compute-1.amazonaws.com> (0, '', '')
+ok: [ec2-54-175-195-234.compute-1.amazonaws.com] => {
+    "changed": false, 
+    "enabled": true, 
+    "invocation": {
+        "module_args": {
+            "daemon_reload": false, 
+            "enabled": true, 
+            "force": null, 
+            "masked": null, 
+            "name": "httpd", 
+            "no_block": false, 
+            "state": "started", 
+            "user": false
+        }
+    }, 
+    "name": "httpd", 
+    "state": "started", 
+    "status": {
+        "ActiveEnterTimestamp": "Fri 2018-10-26 10:00:33 UTC", 
+        "ActiveEnterTimestampMonotonic": "9010744120", 
+        "ActiveExitTimestampMonotonic": "0", 
+        "ActiveState": "active", 
+        "After": "remote-fs.target systemd-journald.socket network.target nss-lookup.target httpd-init.service tmp.mount basic.target system.slice -.mount", 
+        "AllowIsolate": "no", 
+        "AmbientCapabilities": "0", 
+        "AssertResult": "yes", 
+        "AssertTimestamp": "Fri 2018-10-26 10:00:33 UTC", 
+        "AssertTimestampMonotonic": "9010706338", 
+        "Before": "shutdown.target multi-user.target", 
+        "BlockIOAccounting": "no", 
+        "BlockIOWeight": "18446744073709551615", 
+        "CPUAccounting": "no", 
+        "CPUQuotaPerSecUSec": "infinity", 
+        "CPUSchedulingPolicy": "0", 
+        "CPUSchedulingPriority": "0", 
+        "CPUSchedulingResetOnFork": "no", 
+        "CPUShares": "18446744073709551615", 
+        "CanIsolate": "no", 
+        "CanReload": "yes", 
+        "CanStart": "yes", 
+        "CanStop": "yes", 
+        "CapabilityBoundingSet": "18446744073709551615", 
+        "ConditionResult": "yes", 
+        "ConditionTimestamp": "Fri 2018-10-26 10:00:33 UTC", 
+        "ConditionTimestampMonotonic": "9010706336", 
+        "Conflicts": "shutdown.target", 
+        "ControlGroup": "/system.slice/httpd.service", 
+        "ControlPID": "0", 
+        "DefaultDependencies": "yes", 
+        "Delegate": "no", 
+        "Description": "The Apache HTTP Server", 
+        "DevicePolicy": "auto", 
+        "Documentation": "man:httpd.service(8)", 
+        "Environment": "LANG=C", 
+        "ExecMainCode": "0", 
+        "ExecMainExitTimestampMonotonic": "0", 
+        "ExecMainPID": "1611", 
+        "ExecMainStartTimestamp": "Fri 2018-10-26 10:00:33 UTC", 
+        "ExecMainStartTimestampMonotonic": "9010706872", 
+        "ExecMainStatus": "0", 
+        "ExecReload": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -k graceful ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "ExecStart": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -DFOREGROUND ; ignore_errors=no ; start_time=[Fri 2018-10-26 10:00:33 UTC] ; stop_time=[n/a] ; pid=1611 ; code=(null) ; status=0/0 }", 
+        "FailureAction": "none", 
+        "FileDescriptorStoreMax": "0", 
+        "FragmentPath": "/usr/lib/systemd/system/httpd.service", 
+        "GuessMainPID": "yes", 
+        "IOScheduling": "0", 
+        "Id": "httpd.service", 
+        "IgnoreOnIsolate": "no", 
+        "IgnoreOnSnapshot": "no", 
+        "IgnoreSIGPIPE": "yes", 
+        "InactiveEnterTimestampMonotonic": "0", 
+        "InactiveExitTimestamp": "Fri 2018-10-26 10:00:33 UTC", 
+        "InactiveExitTimestampMonotonic": "9010706898", 
+        "JobTimeoutAction": "none", 
+        "JobTimeoutUSec": "0", 
+        "KillMode": "mixed", 
+        "KillSignal": "28", 
+        "LimitAS": "18446744073709551615", 
+        "LimitCORE": "18446744073709551615", 
+        "LimitCPU": "18446744073709551615", 
+        "LimitDATA": "18446744073709551615", 
+        "LimitFSIZE": "18446744073709551615", 
+        "LimitLOCKS": "18446744073709551615", 
+        "LimitMEMLOCK": "65536", 
+        "LimitMSGQUEUE": "819200", 
+        "LimitNICE": "0", 
+        "LimitNOFILE": "4096", 
+        "LimitNPROC": "3805", 
+        "LimitRSS": "18446744073709551615", 
+        "LimitRTPRIO": "0", 
+        "LimitRTTIME": "18446744073709551615", 
+        "LimitSIGPENDING": "3805", 
+        "LimitSTACK": "18446744073709551615", 
+        "LoadState": "loaded", 
+        "MainPID": "1611", 
+        "MemoryAccounting": "no", 
+        "MemoryCurrent": "18446744073709551615", 
+        "MemoryLimit": "18446744073709551615", 
+        "MountFlags": "0", 
+        "Names": "httpd.service", 
+        "NeedDaemonReload": "no", 
+        "Nice": "0", 
+        "NoNewPrivileges": "no", 
+        "NonBlocking": "no", 
+        "NotifyAccess": "main", 
+        "OOMScoreAdjust": "0", 
+        "OnFailureJobMode": "replace", 
+        "PermissionsStartOnly": "no", 
+        "PrivateDevices": "no", 
+        "PrivateNetwork": "no", 
+        "PrivateTmp": "yes", 
+        "ProtectHome": "no", 
+        "ProtectSystem": "no", 
+        "RefuseManualStart": "no", 
+        "RefuseManualStop": "no", 
+        "RemainAfterExit": "no", 
+        "Requires": "-.mount basic.target", 
+        "RequiresMountsFor": "/var/tmp", 
+        "Restart": "no", 
+        "RestartUSec": "100ms", 
+        "Result": "success", 
+        "RootDirectoryStartOnly": "no", 
+        "RuntimeDirectoryMode": "0755", 
+        "SameProcessGroup": "no", 
+        "SecureBits": "0", 
+        "SendSIGHUP": "no", 
+        "SendSIGKILL": "yes", 
+        "Slice": "system.slice", 
+        "StandardError": "inherit", 
+        "StandardInput": "null", 
+        "StandardOutput": "journal", 
+        "StartLimitAction": "none", 
+        "StartLimitBurst": "5", 
+        "StartLimitInterval": "10000000", 
+        "StartupBlockIOWeight": "18446744073709551615", 
+        "StartupCPUShares": "18446744073709551615", 
+        "StatusErrno": "0", 
+        "StatusText": "Total requests: 0; Idle/Busy workers 100/0;Requests/sec: 0; Bytes served/sec:   0 B/sec", 
+        "StopWhenUnneeded": "no", 
+        "SubState": "running", 
+        "SyslogLevelPrefix": "yes", 
+        "SyslogPriority": "30", 
+        "SystemCallErrorNumber": "0", 
+        "TTYReset": "no", 
+        "TTYVHangup": "no", 
+        "TTYVTDisallocate": "no", 
+        "TasksAccounting": "no", 
+        "TasksCurrent": "18446744073709551615", 
+        "TasksMax": "18446744073709551615", 
+        "TimeoutStartUSec": "1min 30s", 
+        "TimeoutStopUSec": "1min 30s", 
+        "TimerSlackNSec": "50000", 
+        "Transient": "no", 
+        "Type": "notify", 
+        "UMask": "0022", 
+        "UnitFilePreset": "disabled", 
+        "UnitFileState": "enabled", 
+        "WantedBy": "multi-user.target", 
+        "Wants": "system.slice httpd-init.service", 
+        "WatchdogTimestamp": "Fri 2018-10-26 10:00:33 UTC", 
+        "WatchdogTimestampMonotonic": "9010744081", 
+        "WatchdogUSec": "0"
+    }
+}
+ok: [ec2-35-175-234-151.compute-1.amazonaws.com] => {
+    "changed": false, 
+    "enabled": true, 
+    "invocation": {
+        "module_args": {
+            "daemon_reload": false, 
+            "enabled": true, 
+            "force": null, 
+            "masked": null, 
+            "name": "httpd", 
+            "no_block": false, 
+            "state": "started", 
+            "user": false
+        }
+    }, 
+    "name": "httpd", 
+    "state": "started", 
+    "status": {
+        "ActiveEnterTimestamp": "Fri 2018-10-26 10:00:33 UTC", 
+        "ActiveEnterTimestampMonotonic": "9007711662", 
+        "ActiveExitTimestampMonotonic": "0", 
+        "ActiveState": "active", 
+        "After": "nss-lookup.target systemd-journald.socket remote-fs.target system.slice httpd-init.service network.target tmp.mount -.mount basic.target", 
+        "AllowIsolate": "no", 
+        "AmbientCapabilities": "0", 
+        "AssertResult": "yes", 
+        "AssertTimestamp": "Fri 2018-10-26 10:00:33 UTC", 
+        "AssertTimestampMonotonic": "9007675819", 
+        "Before": "shutdown.target multi-user.target", 
+        "BlockIOAccounting": "no", 
+        "BlockIOWeight": "18446744073709551615", 
+        "CPUAccounting": "no", 
+        "CPUQuotaPerSecUSec": "infinity", 
+        "CPUSchedulingPolicy": "0", 
+        "CPUSchedulingPriority": "0", 
+        "CPUSchedulingResetOnFork": "no", 
+        "CPUShares": "18446744073709551615", 
+        "CanIsolate": "no", 
+        "CanReload": "yes", 
+        "CanStart": "yes", 
+        "CanStop": "yes", 
+        "CapabilityBoundingSet": "18446744073709551615", 
+        "ConditionResult": "yes", 
+        "ConditionTimestamp": "Fri 2018-10-26 10:00:33 UTC", 
+        "ConditionTimestampMonotonic": "9007675818", 
+        "Conflicts": "shutdown.target", 
+        "ControlGroup": "/system.slice/httpd.service", 
+        "ControlPID": "0", 
+        "DefaultDependencies": "yes", 
+        "Delegate": "no", 
+        "Description": "The Apache HTTP Server", 
+        "DevicePolicy": "auto", 
+        "Documentation": "man:httpd.service(8)", 
+        "Environment": "LANG=C", 
+        "ExecMainCode": "0", 
+        "ExecMainExitTimestampMonotonic": "0", 
+        "ExecMainPID": "1589", 
+        "ExecMainStartTimestamp": "Fri 2018-10-26 10:00:33 UTC", 
+        "ExecMainStartTimestampMonotonic": "9007676322", 
+        "ExecMainStatus": "0", 
+        "ExecReload": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -k graceful ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+        "ExecStart": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -DFOREGROUND ; ignore_errors=no ; start_time=[Fri 2018-10-26 10:00:33 UTC] ; stop_time=[n/a] ; pid=1589 ; code=(null) ; status=0/0 }", 
+        "FailureAction": "none", 
+        "FileDescriptorStoreMax": "0", 
+        "FragmentPath": "/usr/lib/systemd/system/httpd.service", 
+        "GuessMainPID": "yes", 
+        "IOScheduling": "0", 
+        "Id": "httpd.service", 
+        "IgnoreOnIsolate": "no", 
+        "IgnoreOnSnapshot": "no", 
+        "IgnoreSIGPIPE": "yes", 
+        "InactiveEnterTimestampMonotonic": "0", 
+        "InactiveExitTimestamp": "Fri 2018-10-26 10:00:33 UTC", 
+        "InactiveExitTimestampMonotonic": "9007676349", 
+        "JobTimeoutAction": "none", 
+        "JobTimeoutUSec": "0", 
+        "KillMode": "mixed", 
+        "KillSignal": "28", 
+        "LimitAS": "18446744073709551615", 
+        "LimitCORE": "18446744073709551615", 
+        "LimitCPU": "18446744073709551615", 
+        "LimitDATA": "18446744073709551615", 
+        "LimitFSIZE": "18446744073709551615", 
+        "LimitLOCKS": "18446744073709551615", 
+        "LimitMEMLOCK": "65536", 
+        "LimitMSGQUEUE": "819200", 
+        "LimitNICE": "0", 
+        "LimitNOFILE": "4096", 
+        "LimitNPROC": "3805", 
+        "LimitRSS": "18446744073709551615", 
+        "LimitRTPRIO": "0", 
+        "LimitRTTIME": "18446744073709551615", 
+        "LimitSIGPENDING": "3805", 
+        "LimitSTACK": "18446744073709551615", 
+        "LoadState": "loaded", 
+        "MainPID": "1589", 
+        "MemoryAccounting": "no", 
+        "MemoryCurrent": "18446744073709551615", 
+        "MemoryLimit": "18446744073709551615", 
+        "MountFlags": "0", 
+        "Names": "httpd.service", 
+        "NeedDaemonReload": "no", 
+        "Nice": "0", 
+        "NoNewPrivileges": "no", 
+        "NonBlocking": "no", 
+        "NotifyAccess": "main", 
+        "OOMScoreAdjust": "0", 
+        "OnFailureJobMode": "replace", 
+        "PermissionsStartOnly": "no", 
+        "PrivateDevices": "no", 
+        "PrivateNetwork": "no", 
+        "PrivateTmp": "yes", 
+        "ProtectHome": "no", 
+        "ProtectSystem": "no", 
+        "RefuseManualStart": "no", 
+        "RefuseManualStop": "no", 
+        "RemainAfterExit": "no", 
+        "Requires": "-.mount basic.target", 
+        "RequiresMountsFor": "/var/tmp", 
+        "Restart": "no", 
+        "RestartUSec": "100ms", 
+        "Result": "success", 
+        "RootDirectoryStartOnly": "no", 
+        "RuntimeDirectoryMode": "0755", 
+        "SameProcessGroup": "no", 
+        "SecureBits": "0", 
+        "SendSIGHUP": "no", 
+        "SendSIGKILL": "yes", 
+        "Slice": "system.slice", 
+        "StandardError": "inherit", 
+        "StandardInput": "null", 
+        "StandardOutput": "journal", 
+        "StartLimitAction": "none", 
+        "StartLimitBurst": "5", 
+        "StartLimitInterval": "10000000", 
+        "StartupBlockIOWeight": "18446744073709551615", 
+        "StartupCPUShares": "18446744073709551615", 
+        "StatusErrno": "0", 
+        "StatusText": "Total requests: 0; Idle/Busy workers 100/0;Requests/sec: 0; Bytes served/sec:   0 B/sec", 
+        "StopWhenUnneeded": "no", 
+        "SubState": "running", 
+        "SyslogLevelPrefix": "yes", 
+        "SyslogPriority": "30", 
+        "SystemCallErrorNumber": "0", 
+        "TTYReset": "no", 
+        "TTYVHangup": "no", 
+        "TTYVTDisallocate": "no", 
+        "TasksAccounting": "no", 
+        "TasksCurrent": "18446744073709551615", 
+        "TasksMax": "18446744073709551615", 
+        "TimeoutStartUSec": "1min 30s", 
+        "TimeoutStopUSec": "1min 30s", 
+        "TimerSlackNSec": "50000", 
+        "Transient": "no", 
+        "Type": "notify", 
+        "UMask": "0022", 
+        "UnitFilePreset": "disabled", 
+        "UnitFileState": "enabled", 
+        "WantedBy": "multi-user.target", 
+        "Wants": "httpd-init.service system.slice", 
+        "WatchdogTimestamp": "Fri 2018-10-26 10:00:33 UTC", 
+        "WatchdogTimestampMonotonic": "9007711636", 
+        "WatchdogUSec": "0"
+    }
+}
+META: ran handlers
+META: ran handlers
+
+PLAY RECAP *****************************************************************************************************************************************
+ec2-35-175-234-151.compute-1.amazonaws.com : ok=4    changed=0    unreachable=0    failed=0   
+ec2-54-175-195-234.compute-1.amazonaws.com : ok=4    changed=0    unreachable=0    failed=0   
+

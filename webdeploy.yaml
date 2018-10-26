@@ -1,0 +1,16 @@
+---
+- hosts: webservers
+  tasks:
+  - name: install latest apache server
+    yum: 
+      name: httpd
+      state: latest
+  - name: copy html file
+    copy: 
+      src: /home/ec2-user/environment/ansi/index.hmtl
+      dest: /var/www/html
+  - name: Start service httpd, if not started
+    service:
+      name: httpd
+      state: started
+      enabled: yes
